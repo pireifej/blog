@@ -1,0 +1,7 @@
+{
+	"Pages": ["About", "Portfolio", "Gallery"],
+	"Categories": ["Advertising", "Development", "Donations"],
+	"Artists": ["Tiziano Vecelli", "Vittore Carpaccio", "Sandro Botticelli"],
+	"Archives": ["April 2014", "March 2014", "February 2014"],
+	"Account": ["Log in", "Members Only", "Manage"]
+}
