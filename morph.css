@@ -29,7 +29,6 @@
 	height: 200px;
 	width: 200px;
 	-webkit-transform-style: preserve-3d;
-	/* this tell it to animate whenever the -webkit-trasform property changes */
 	-webkit-transition-property: -webkit-transform;
 	-webkit-transition-duration: 1500ms;
 	-webkit-transition-timing-function : ease-out;

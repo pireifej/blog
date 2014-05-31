@@ -33,7 +33,6 @@ function toggleShape() {
 		addClassName(shape, 'ring');
 	}
 	
-	// Move the ring back in Z so it's not so in-your-face.
 	var stage = document.getElementById('stage');
 	if (hasClassName(shape, 'ring'))
 		stage.style.webkitTransform = 'translateZ(-200px)';
@@ -62,16 +61,13 @@ var jAd = function() {
 	}
 
 	  function bindTouches() {
-		//ignore the touchmove event
 		document.addEventListener('touchmove', function(e) {
 			e.preventDefault();
 		});
 
 		document.addEventListener('touchstart', function(e) {
 			e.preventDefault();
-			//e.touches is an array (for multitouch usage) but we just want the first finger down
 			var touch = e.touches[0];
-			//save the time and the screenY coordinate
 			jAd.currentTouch.startY = touch.screenY;
 			jAd.currentTouch.startTime = e.timeStamp;
 		}, false);
@@ -80,23 +76,17 @@ var jAd = function() {
 			e.preventDefault();
 			var touch = e.changedTouches[0];
 			jAd.currentTouch.endY = touch.screenY;
-			//work out the speed using the saved coordinate and time
 			var time = e.timeStamp - jAd.currentTouch.startTime;
 			var speed = (jAd.currentTouch.startY - jAd.currentTouch.endY)/time;
-			//send the speed to the spin function
 			jAd.spin(speed);
 		}, false);
 	};
 
 	function spin(speed) {
-		//get a string representation of the current 3dCSSMatrix of the <ul> (jAd.shape)
 		var theTransform = window.getComputedStyle(jAd.shape).webkitTransform;
-		//from this create a new WebKitCSSMatrix
 		var matrix = new WebKitCSSMatrix(theTransform);
-		//do some stuff to get a number that is somewhere between 0 and 179
 		var newX = Math.round(speed * 120);
 		newX = (newX > 179) ? 179 : ((newX < -179) ? -179 : newX);
-		//rotate the <ul> in the x plane by this value
 		shape.style.webkitTransform= matrix.rotate(newX, 0, 0);
 	};
 }
