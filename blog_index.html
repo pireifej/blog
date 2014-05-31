@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Leonardo Da Vinci Blog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="morph.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.0.custom.min.css">
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="ie.css" /><![endif]-->
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.0.custom.min.js"></script>
+<script type="text/javascript" src="blog.js"></script>
+<script type="text/javascript" src="morph.js"></script>
+
+</head>
+<body>
+<!-- BEGIN wrapper -->
+<div id="wrapper">
+  <!-- BEGIN header -->
+	<div id="header">
+		<!-- begin pages -->
+		<ul class="pages">
+			<li><a href="">Home</a></li>
+			<li><a href="http://www.linkedin.com/pub/paul-ireifej/b/829/572">About Me</a></li>
+			<li><a id="contact_us" onclick="contact_us_form_open()" onmouseover="" style="cursor: pointer;">Contact Us</a></li>
+		</ul>
+		<!-- end pages -->
+		<!-- begin logo -->
+		<h1>The Works of Leonardo Da Vinci</a></h1>
+		<!-- end logo -->
+		<!-- begin categories -->
+		<ul class="categories">
+			<li>About</a></li>
+			<li>Paintings</a></li>
+			<li>Inventions</a></li>
+			<li>Books</a></li>
+			<li>Self Portraits</a></li>
+		</ul>
+		<!-- end categories -->
+	</div>
+	<!-- END header -->
+	<!-- BEGIN left sidebar -->
+	<div id="lsidebar">
+		<!-- loads via Ajax in menu.dat -->
+	</div>
+	<!-- END left sidebar -->
+	<!-- BEGIN content -->
+	<div id="content">
+		<!-- loads via Ajax from subject field in file_name.dat-->
+		<!-- begin latest posts -->
+	</div>
+	<!-- END content -->
+	<!-- BEGIN right sidebar -->
+	<div id="rsidebar">
+		<!-- begin search -->
+		<div class="box">
+			<form method="get" action="http://www.google.com/search">
+			<input type="text" name="q" size="31" maxlength="255" value="" />
+			<button type="submit">Search</button>
+			</form>
+		</div>
+		<!-- end search -->
+		<!-- begin related articles -->
+		<div class="box">
+			<div class="buffer">
+				<h2>Related Articles</h2>
+				<ul>
+					<li><a onclick="open_article('ambidextrous')" onmouseover="" style="cursor: pointer;">Leonardo was ambidextrous!</a></li>
+					<li><a onclick="open_article('dyslexia')" onmouseover="" style="cursor: pointer;">Heightened visuo-spatial abilities due to dyslexia?</a></li>
+					<li><a onclick="open_article('cadavers')" onmouseover="" style="cursor: pointer;">Learned about human body by dissecting human cadavers - ew!</a></li>
+					<li><a onclick="open_article('vegetarian')" onmouseover="" style="cursor: pointer;">Vegetarian by trade</a></li>
+					<li><a onclick="open_article('mona_lisa')" onmouseover="" style="cursor: pointer;"> Mona Lisa is 83% happy, 9% disgusted, 6% fearful, and 2% angry... mystery solved?</a></li>
+					<li><a onclick="open_article('detail')" onmouseover="" style="cursor: pointer;">Leonardo saw every detail as existing in relationship to the whole</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end related articles -->
+		<!-- begin related paintings -->
+		<div class="box">
+			<div class="buffer">
+				<h2>Related Paintings</h2>
+				<p class="flickr">
+					<a href="https://www.google.com/#q=mona+lisa"><img src="images/mona_lisa.jpg" alt="" /></a>
+					<a href="https://www.google.com/#q=the+virgin+of+the+rocks"><img src="images/the_virgin_of_the_rocks.jpg" alt="" /></a>
+					<a href="https://www.google.com/#q=lady+with+an+ermine"><img src="images/lady_with_an_ermine.jpg" alt="" /></a>
+					<a href="https://www.google.com/#q=ginevra+de+benci"><img src="images/ginevra_de_benci.jpg" alt="" /></a>
+					<a href="https://www.google.com/#q=baptism+of+christ"><img src="images/the_baptism_of_christ.jpg" alt="" /></a>
+					<a href="https://www.google.com/#q=the+adoration+of+the+magi"><img src="images/the_adoration_of_the_magi.jpg" alt="" /></a> </p>
+			</div>
+		</div>
+		<!-- end related paintings -->
+		<!-- begin morphing numbers -->
+		<div class="box">
+			<div class="buffer">
+				<h2>Morphing Numbers</h2>
+				<div class="tags">
+					<div id="container"> 
+						<div id="stage"> 
+							<div id="shape" class="cube backfaces"> 
+								<div class="plane one">1</div> 
+								<div class="plane two">2</div> 
+								<div class="plane three">3</div> 
+								<div class="plane four">4</div> 
+								<div class="plane five">5</div> 
+								<div class="plane six">6</div> 
+								<div class="plane seven">7</div> 
+								<div class="plane eight">8</div> 
+								<div class="plane nine">9</div> 
+								<div class="plane ten">10</div> 
+								<div class="plane eleven">11</div> 
+								<div class="plane twelve">12</div>
+							</div> 
+						</div> 
+					</div> 
+				</div>
+			</div>
+		</div>
+		<!-- end morphing numbers -->
+	</div>
+	<!-- END right sidebar -->
+	<div class="break"></div>
+</div>
+<!-- END wrapper -->
+<!-- BEGIN footer -->
+<div id="footer">
+	<div class="buffer">
+		<p class="l">Copyright &copy; 2014 - Leonardo Da Vinci Blog &middot; All Rights Reserved</p>
+		<p class="r">Website by: <a href="http://www.linkedin.com/pub/paul-ireifej/b/829/572">Paul Ireifej</a> | Learn More <a href="https://github.com/pireifej">pireifej Git Hub</a></p>
+	</div>
+</div>
+<div id="dialog"></div>
+<!-- END footer -->
+</body>
+</html>
